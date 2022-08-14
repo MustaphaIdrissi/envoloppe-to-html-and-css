@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+	background-color:rgb(0, 0, 0,0.7);
+}
+.envolpe{
+
+    width: 600px;
+    height: 300px;
+    position: relative;
+    text-align: center;
+    background-color: aqua;
+   
+}
+.envolpe::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom: 150px solid rgb(38, 17, 156);
+    border-left: 300px solid rgb(211, 16, 16);
+    border-right: 300px solid rgb(231, 9, 9);
+    border-top: 150px solid rgb(0, 231, 0);
+    
+}
+.envolpe::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0px;
+z-index: 4;
+transition: 3s;
+border-bottom: 150px solid transparent;
+border-left: 300px solid transparent;
+border-right: 300px solid transparent;
+border-top: 150px solid rgb(38, 17, 156);
+transform-origin: top;
+}
+.envolpe:hover::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0px;
+transform: rotateX(180deg);
+
+border-bottom: 150px solid transparent;
+border-left: 300px solid transparent;
+border-right: 300px solid transparent;
+border-top: 150px solid rgb(38, 17, 156);
+}
